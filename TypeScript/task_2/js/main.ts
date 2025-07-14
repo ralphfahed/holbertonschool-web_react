@@ -62,7 +62,13 @@ function executeWork(employee: Director | Teacher): string {
   }
 }
 
-// 🧪 Example outputs
-console.log(executeWork(createEmployee(200)));   // Getting to work
-console.log(executeWork(createEmployee(1000)));  // Getting to director tasks
+// Define the string literal type
+type Subjects = 'Math' | 'History';
 
+// Define the function using the string literal type
+function teachClass(todayClass: Subjects): string {
+  if (todayClass === 'Math') {
+    return 'Teaching Math';
+  }
+  return 'Teaching History';
+}
